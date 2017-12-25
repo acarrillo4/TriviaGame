@@ -1,0 +1,191 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Trivia Game</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+    <link rel="stylesheet" type="text/css" href="assets/css/style.css">
+    <link href="https://fonts.googleapis.com/css?family=Alegreya" rel="stylesheet">
+</head>
+
+<body>
+	<form name="game">
+	    <!-- Creates the Overall Grid -->
+	    <div id="timer" class="container">
+	    	<div class="row">
+	    		<div class="col-md-12">
+					<h1>Seconds Left: </h1>
+	    			<h2 id="updateTimer">60</h2>
+	    		</div>
+	    	</div>
+	    </div>
+	    <div id="gameQuestions" class="container">
+	        <!-- Row 1 -->
+	        <div class="row">
+	            <div id="startGame" class="col-md-12">
+	 				<input type="button" value="TRIVIA GAME - START" id="start" class="btn btn-primary btn-lg" onclick="startGame()">
+	            </div>
+	        </div>
+	        <!-- Row 2 - 1st question-->
+	        <div class="row">
+	            <div class="col-md-12 question">
+	                <h3>1) In the 2016 Pixar film "Moana," who plays the character Maui?</h3>
+	            </div>
+	        </div>
+	        <!-- Row 3 - 1st question answer choices-->
+	        <div class="row">
+	            <div class="col-md-3 answerchoices">
+	                <input type="radio" name="q1" value="a">Adam Sandler
+	            </div>
+	            <div class="col-md-3 answerchoices">
+	                <input type="radio" name="q1" value="b">Kevin Hart
+	            </div>
+	            <div class="col-md-3 answerchoices">
+	                <input type="radio" name="q1" value="c">Dwayne "The Rock" Johnson 
+	            </div>
+	            <div class="col-md-3 answerchoices">
+	                <input type="radio" name="q1" value="d">Tom Hanks
+	            </div>
+	        </div>
+	        <!-- Row 4 - 2nd question-->
+	        <div class="row">
+	            <div class="col-md-12 question">
+	            	<h3>2) In the 2003 Pixar film "Finding Nemo", what is Nemo's dad's name?</h3>
+	            </div>
+	        </div>
+	        <!-- Row 5 - 2nd question answer choices-->
+	        <div class="row">
+	            <div class="col-md-3 answerchoices">
+	                <input type="radio" name="q2" value="a">Marvin
+	            </div>
+	            <div class="col-md-3 answerchoices">
+	                <input type="radio" name="q2" value="b">Marlin
+	            </div>
+	            <div class="col-md-3 answerchoices">
+	                <input type="radio" name="q2" value="c">Martin
+	            </div>
+	            <div class="col-md-3 answerchoices">
+	                <input type="radio" name="q2" value="d">Mark
+	            </div>
+	        </div>
+	        <!-- Row 6 - 3rd question-->
+	        <div class="row">
+	            <div class="col-md-12 question">
+	                <h3>3) What is Buzz Lightyear's famous catchphrase from the 1995 film "Toy Story"?</h3>
+	            </div>
+	        </div>
+	        <!-- Row 7 - 3rd question answer choices-->
+	        <div class="row">
+	            <div class="col-md-3 answerchoices">
+	                <input type="radio" name="q3" value="a">Time for some planetary action!
+	            </div>
+	            <div class="col-md-3 answerchoices">
+	                <input type="radio" name="q3" value="b">To infinity, and beyond!
+	            </div>
+	            <div class="col-md-3 answerchoices">
+	                <input type="radio" name="q3" value="c">There's a snake in my boot!
+	            </div>
+	            <div class="col-md-3 answerchoices">
+	                <input type="radio" name="q3" value="d">Great Caesar's ghost!
+	            </div>
+	        </div>
+	        <!-- Row 8 - 4th question-->
+	        <div class="row">
+	            <div class="col-md-12 question">
+	                <h3>4) What exactly is Monsters, Inc. in the 2001 Pixar film "Monsters, Inc."?</h3>
+	            </div>
+	        </div>
+	        <!-- Row 9 - 4th question answer choices-->
+	        <div class="row">
+	            <div class="col-md-3 answerchoices">
+	                <input type="radio" name="q4" value="a">Factory that makes monster-sized shoes
+	            </div>
+	            <div class="col-md-3 answerchoices">
+	                <input type="radio" name="q4" value="b">A country club for Monsters
+	            </div>
+	            <div class="col-md-3 answerchoices">
+	                <input type="radio" name="q4" value="c">Restaurant that caters to monsters
+	            </div>
+	            <div class="col-md-3 answerchoices">
+	                <input type="radio" name="q4" value="d">Factory that processes screams
+	            </div>
+	        </div>
+	        <!-- Row 10 - 5th question-->
+	        <div class="row">
+	            <div class="col-md-12 question">
+	                <h3>5) The 2017 Pixar film "Coco", is based on which Mexican holiday?</h3>
+	            </div>
+	        </div>
+	        <!-- Row 11 - 5th question answer choices-->
+	        <div class="row">
+	            <div class="col-md-3 answerchoices">
+	                <input type="radio" name="q5" value="a">Mexican Independence Day
+	            </div>
+	            <div class="col-md-3 answerchoices">
+	                <input type="radio" name="q5" value="b">Day of the Dead
+	            </div>
+	            <div class="col-md-3 answerchoices">
+	                <input type="radio" name="q5" value="c">Cinco de Mayo
+	            </div>
+	            <div class="col-md-3 answerchoices">
+	                <input type="radio" name="q5" value="d">Mother's Day
+	            </div>
+			</div>
+	        <!-- Row 12 - 6th question-->
+	        <div class="row">
+	            <div class="col-md-12 question">
+	                <h3>6) What is the name of the talking snowman that Elsa creates with her powers during the 2013 animated movie "Frozen"?</h3>
+	            </div>
+	        </div>
+	        <!-- Row 13 - 6th question answer choices-->
+	        <div class="row">
+	            <div class="col-md-3 answerchoices">
+	                <input type="radio" name="q6" value="a">Olaf
+	            </div>
+	            <div class="col-md-3 answerchoices">
+	                <input type="radio" name="q6" value="b">Kristoff
+	            </div>
+	            <div class="col-md-3 answerchoices">
+	                <input type="radio" name="q6" value="c">Oaken
+	            </div>
+	            <div class="col-md-3 answerchoices">
+	                <input type="radio" name="q6" value="d">Hans
+	            </div>
+	        </div>
+			<input type="button" value="SUBMIT" id="submit" class="btn btn-primary btn-lg" onclick="getScores()">
+		</div>
+	</form>
+	<div id="results" class="container">
+		<div class="row results">
+			<div class="col-md-12">
+				<h2>Your scores are in!</h2>
+			</div>
+		</div>
+		<div class="row results">
+			<div class="col-md-12">
+				<h2>Correct: </h2>
+        		<h2 id="correctScore"></h2>
+			</div>
+		</div>
+		<div class="row results">
+			<div class="col-md-12">
+				<h2>Incorrect: </h2>
+        		<h2 id="incorrectScore"></h2>
+			</div>
+		</div>
+		<div class="row results">
+			<div class="col-md-12">
+				<h2>Unanswered: </h2>
+        		<h2 id="unansweredScore"></h2>
+			</div>
+		</div>
+
+	</div>
+		<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+        <script type="text/javascript" src="assets/javascript/app.js"></script>
+
+</body>
+
+</html>
+

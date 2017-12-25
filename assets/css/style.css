@@ -1,0 +1,56 @@
+body { 
+  background-image: url("../images/pixar.jpg");
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  background-position: center;
+  background-color: #021133;
+  font-family: 'Alegreya', serif;
+}
+.container {
+	width: 1000px;
+	padding: 25px;
+	background-color: #021133;
+	color: white;
+
+}
+#gameQuestions {
+	text-align: left;
+}
+#startGame, #results, #timer, #submit{
+	text-align: center;
+}
+h2 {
+	font-size: 45px;
+
+}
+#results, #gameQuestions, #timer {
+	visibility: hidden;
+}
+#start{
+	visibility: visible;
+	margin-top: 20%;
+	font-size: 60px;
+}
+.question, #submit, .results{
+	margin-top: 15px;
+}
+#timer {
+	position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 1;
+}
+#gameQuestions {
+	margin-top: 140px;
+	padding: 50px;
+}
+h1 {
+	font-size: 60px;
+}
+h3 {
+	font-size: 30px;
+}
+.answerchoices {
+	font-size: 20px;
+}
